@@ -1,4 +1,5 @@
-# Welcome to Scribal Bible
+# Welcome to `scribal.bible` website
+
 
 [labels](https://github.com/joshualinog/scribal.bible/labels)
 
