@@ -1,0 +1,5 @@
+{
+  "name": "Scribal Codespace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "postCreateCommand": "bash .devcontainer/setup-gh-auth.sh || true"
+}
