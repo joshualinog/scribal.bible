@@ -1,0 +1,8 @@
+Repository: joshualinog/scribal.bible
+Total issues: 5
+
+#5 	OPEN	setup the two repo workflow	https://github.com/joshualinog/scribal.bible/issues/5
+#4 	OPEN	create an issue template via the settings of  scribal.bible to structure isPost posts	https://github.com/joshualinog/scribal.bible/issues/4
+#3 	OPEN	create and setup the data schema for Post	https://github.com/joshualinog/scribal.bible/issues/3
+#2 	OPEN	set up the initial blog homepage with tailwind	https://github.com/joshualinog/scribal.bible/issues/2
+#1 	OPEN	GENERAL CODE STRUCTURE	https://github.com/joshualinog/scribal.bible/issues/1
