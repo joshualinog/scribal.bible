@@ -1,0 +1,76 @@
+name: Receive posts-updated dispatch (GitHub App)
+
+on:
+  repository_dispatch:
+    types: [posts-updated]
+
+jobs:
+  fetch-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v4
+
+      - name: Create App JWT
+        id: create_jwt
+        env:
+          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
+          GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          echo "$GITHUB_APP_PRIVATE_KEY" > /tmp/app-private-key.pem
+          now=$(date +%s)
+          iat=$now
+          exp=$((now + 600))
+          header=$(printf '%s' '{"alg":"RS256","typ":"JWT"}' | openssl base64 -e | tr -d '\n=' | tr '/+' '_-' )
+          payload=$(printf '%s' "{\"iat\":$iat,\"exp\":$exp,\"iss\":$GITHUB_APP_ID}" | openssl base64 -e | tr -d '\n=' | tr '/+' '_-')
+          unsigned="${header}.${payload}"
+          sig=$(printf '%s' "$unsigned" | openssl dgst -sha256 -sign /tmp/app-private-key.pem | openssl base64 -e | tr -d '\n=' | tr '/+' '_-')
+          jwt="${unsigned}.${sig}"
+          echo "jwt=${jwt}" >> $GITHUB_OUTPUT
+
+      - name: Checkout private repo via App installation
+        env:
+          JWT: ${{ steps.create_jwt.outputs.jwt }}
+          PRIVATE_OWNER: ${{ secrets.PRIVATE_CONTENT_OWNER }}
+          PRIVATE_REPO: ${{ secrets.PRIVATE_CONTENT_REPO }}
+        run: |
+          set -euo pipefail
+          # find installation id for private repo
+          inst=$(curl -s -H "Authorization: Bearer $JWT" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$PRIVATE_OWNER/$PRIVATE_REPO/installation" | jq -r .id)
+          if [ -z "$inst" ] || [ "$inst" = "null" ]; then
+            echo "Failed to find installation id for $PRIVATE_OWNER/$PRIVATE_REPO"
+            exit 1
+          fi
+          # create installation access token
+          token=$(curl -s -X POST -H "Authorization: Bearer $JWT" -H "Accept: application/vnd.github+json" "https://api.github.com/app/installations/$inst/access_tokens" | jq -r .token)
+          if [ -z "$token" ] || [ "$token" = "null" ]; then
+            echo "Failed to create installation token"
+            exit 1
+          fi
+          # checkout the private repo using actions/checkout with token
+          mkdir -p private_repo
+          git -c http.extraHeader="Authorization: Bearer $token" clone https://github.com/$PRIVATE_OWNER/$PRIVATE_REPO private_repo
+
+      - name: Copy generated JSON and assets
+        run: |
+          set -e
+          mkdir -p src/_data/posts src/assets/posts
+          cp -r private_repo/src/_data/posts/* src/_data/posts/ || true
+          cp -r private_repo/src/assets/posts/* src/assets/posts/ || true
+
+      - name: Build / Deploy (replace with your build steps)
+        run: |
+          echo "Build steps go here"
+
+      - name: Commit copied content (optional)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain | grep -q .; then
+            git add src/_data/posts src/assets/posts || true
+            git commit -m "chore: sync posts from private content repo" || true
+            git push
+          else
+            echo "No changes to commit"
+          fi

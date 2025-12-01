@@ -1,0 +1,33 @@
+name: Generate Posts and Push to Hosting Repo
+
+on:
+  issues:
+    types: [opened, edited, labeled, unlabeled]
+  issue_comment:
+    types: [created, edited]
+  workflow_dispatch: {}
+
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (none required)
+        run: |
+          node --version
+
+      - name: Run generate-and-push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOSTING_REPO: joshualinog/scribal.bible
+          HOSTING_PUSH_TOKEN: ${{ secrets.HOSTING_PUSH_TOKEN }}
+          POST_LABELS: POST,isPost
+        run: |
+          node ./content-scripts/generate-and-push.js

@@ -1,0 +1,78 @@
+name: Generate JSON and dispatch (GitHub App)
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+jobs:
+  generate-and-dispatch:
+    runs-on: ubuntu-latest
+    if: github.event.label && github.event.label.name == 'isPost'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Generate per-issue JSON
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTENT_REPO: ${{ github.repository }}
+          POST_LABELS: isPost
+        run: |
+          node content-scripts/generate-and-push.js || node content-scripts/generate-and-push.js || true
+
+      - name: Commit generated posts if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain | grep -q .; then
+            git add src/_data/posts src/assets/posts || true
+            git commit -m "chore: generate post JSON from issue #${{ github.event.issue.number }}" || true
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Create App JWT
+        id: create_jwt
+        env:
+          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
+          GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          echo "$GITHUB_APP_PRIVATE_KEY" > /tmp/app-private-key.pem
+          now=$(date +%s)
+          iat=$now
+          exp=$((now + 600))
+          header=$(printf '%s' '{"alg":"RS256","typ":"JWT"}' | openssl base64 -e | tr -d '\n=' | tr '/+' '_-' )
+          payload=$(printf '%s' "{\"iat\":$iat,\"exp\":$exp,\"iss\":$GITHUB_APP_ID}" | openssl base64 -e | tr -d '\n=' | tr '/+' '_-')
+          unsigned="${header}.${payload}"
+          sig=$(printf '%s' "$unsigned" | openssl dgst -sha256 -sign /tmp/app-private-key.pem | openssl base64 -e | tr -d '\n=' | tr '/+' '_-')
+          jwt="${unsigned}.${sig}"
+          echo "jwt=${jwt}" >> $GITHUB_OUTPUT
+
+      - name: Dispatch to public repo via App installation
+        env:
+          JWT: ${{ steps.create_jwt.outputs.jwt }}
+          TARGET_OWNER: ${{ secrets.TARGET_PUBLIC_OWNER }}
+          TARGET_REPO: ${{ secrets.TARGET_PUBLIC_REPO }}
+        run: |
+          set -euo pipefail
+          # get installation id for target repo
+          inst=$(curl -s -H "Authorization: Bearer $JWT" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$TARGET_OWNER/$TARGET_REPO/installation" | jq -r .id)
+          if [ -z "$inst" ] || [ "$inst" = "null" ]; then
+            echo "Failed to find installation id for $TARGET_OWNER/$TARGET_REPO"
+            exit 0
+          fi
+          # create installation access token
+          token=$(curl -s -X POST -H "Authorization: Bearer $JWT" -H "Accept: application/vnd.github+json" "https://api.github.com/app/installations/$inst/access_tokens" | jq -r .token)
+          if [ -z "$token" ] || [ "$token" = "null" ]; then
+            echo "Failed to create installation token"
+            exit 1
+          fi
+          # send repository_dispatch event to public repo
+          curl -s -X POST -H "Authorization: token $token" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$TARGET_OWNER/$TARGET_REPO/dispatches" -d '{"event_type":"posts-updated","client_payload":{"source_repo":"'"${{ github.repository }}"'","issue":'"${{ github.event.issue.number }}"'}}' || echo "dispatch failed"
