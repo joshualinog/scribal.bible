@@ -1,0 +1,36 @@
+2025-12-01T19:00:32.0062282Z ##[group]Run mkdir -p scripts
+2025-12-01T19:00:32.0063327Z [36;1mmkdir -p scripts[0m
+2025-12-01T19:00:32.0063954Z [36;1mif [ -f scripts/generate-and-push.js ]; then[0m
+2025-12-01T19:00:32.0064655Z [36;1m  node scripts/generate-and-push.js[0m
+2025-12-01T19:00:32.0065258Z [36;1melse[0m
+2025-12-01T19:00:32.0065865Z [36;1m  echo "Place generate-and-push.js in scripts/ and rerun"[0m
+2025-12-01T19:00:32.0066582Z [36;1m  exit 1[0m
+2025-12-01T19:00:32.0067043Z [36;1mfi[0m
+2025-12-01T19:00:32.0102953Z shell: /usr/bin/bash -e {0}
+2025-12-01T19:00:32.0103653Z env:
+2025-12-01T19:00:32.0104386Z   GITHUB_TOKEN: ***
+2025-12-01T19:00:32.0105683Z   HOSTING_PUSH_TOKEN: ***
+2025-12-01T19:00:32.0106244Z   HOSTING_REPO: ***
+2025-12-01T19:00:32.0106700Z ##[endgroup]
+2025-12-01T19:00:32.2036827Z Fetching issues from ***-CONTENT-CREATION
+2025-12-01T19:00:32.3851435Z GitHub API error 403 {
+2025-12-01T19:00:32.3853661Z   message: 'Resource not accessible by integration',
+2025-12-01T19:00:32.3855237Z   documentation_url: 'https://docs.github.com/rest/issues/issues#list-repository-issues',
+2025-12-01T19:00:32.3856582Z   status: '403'
+2025-12-01T19:00:32.3857272Z }
+2025-12-01T19:00:32.3885769Z ##[error]Process completed with exit code 1.
+2025-12-01T19:00:32.4018040Z Post job cleanup.
+2025-12-01T19:00:32.4972843Z [command]/usr/bin/git version
+2025-12-01T19:00:32.5014861Z git version 2.51.2
+2025-12-01T19:00:32.5085507Z Temporarily overriding HOME='/home/runner/work/_temp/93e75b02-63f5-4bdb-b67a-76a2a749061a' before making global git config changes
+2025-12-01T19:00:32.5087999Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-01T19:00:32.5093567Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/scribal.bible-CONTENT-CREATION/scribal.bible-CONTENT-CREATION
+2025-12-01T19:00:32.5153281Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-01T19:00:32.5203519Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-01T19:00:32.5559699Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-01T19:00:32.5598411Z http.https://github.com/.extraheader
+2025-12-01T19:00:32.5630897Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-01T19:00:32.5670302Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-01T19:00:32.6021440Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-01T19:00:32.6079446Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-01T19:00:32.6581546Z Cleaning up orphan processes

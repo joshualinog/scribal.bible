@@ -1,13 +1,6 @@
-name: Fetch Posts from Content Repo
+name: Fetch Posts from Content Repo (disabled)
 
-on:
-  issues:
-    types: [opened, edited, labeled, unlabeled]
-  issue_comment:
-    types: [created, edited]
-  workflow_dispatch: {}
-  schedule:
-    - cron: '0 0 * * *'
+on: {}
 
 jobs:
   fetch:

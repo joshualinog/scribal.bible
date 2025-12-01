@@ -1,6 +1,11 @@
 name: Issue -> Post JSON (disabled)
 
-on: {}
+# Disabled: original workflow renamed to prevent duplicate runs.
+# If you need to re-enable this workflow, rename the file back to `issue-to-json.yml`.
+
+on:
+  issues:
+    types: [labeled]
 
 jobs:
   generate-post-json:

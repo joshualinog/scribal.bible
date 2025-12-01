@@ -1,0 +1,135 @@
+﻿2025-12-01T19:00:30.6926531Z Current runner version: '2.329.0'
+2025-12-01T19:00:30.6960260Z ##[group]Runner Image Provisioner
+2025-12-01T19:00:30.6961479Z Hosted Compute Agent
+2025-12-01T19:00:30.6962795Z Version: 20251016.436
+2025-12-01T19:00:30.6963861Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-12-01T19:00:30.6964985Z Build Date: 2025-10-15T20:44:12Z
+2025-12-01T19:00:30.6966099Z ##[endgroup]
+2025-12-01T19:00:30.6967018Z ##[group]Operating System
+2025-12-01T19:00:30.6967907Z Ubuntu
+2025-12-01T19:00:30.6968762Z 24.04.3
+2025-12-01T19:00:30.6969648Z LTS
+2025-12-01T19:00:30.6970478Z ##[endgroup]
+2025-12-01T19:00:30.6971281Z ##[group]Runner Image
+2025-12-01T19:00:30.6972229Z Image: ubuntu-24.04
+2025-12-01T19:00:30.6973465Z Version: 20251112.124.1
+2025-12-01T19:00:30.6975329Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+2025-12-01T19:00:30.6978087Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+2025-12-01T19:00:30.6979843Z ##[endgroup]
+2025-12-01T19:00:30.6981619Z ##[group]GITHUB_TOKEN Permissions
+2025-12-01T19:00:30.6984492Z Contents: write
+2025-12-01T19:00:30.6985326Z Metadata: read
+2025-12-01T19:00:30.6986280Z ##[endgroup]
+2025-12-01T19:00:30.6989170Z Secret source: Actions
+2025-12-01T19:00:30.6990266Z Prepare workflow directory
+2025-12-01T19:00:30.7448842Z Prepare all required actions
+2025-12-01T19:00:30.7505117Z Getting action download info
+2025-12-01T19:00:31.0664105Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-12-01T19:00:31.4353012Z Complete job name: generate
+2025-12-01T19:00:31.5012838Z ##[group]Run actions/checkout@v4
+2025-12-01T19:00:31.5013843Z with:
+2025-12-01T19:00:31.5014493Z   repository: ***-CONTENT-CREATION
+2025-12-01T19:00:31.5015202Z   token: ***
+2025-12-01T19:00:31.5015658Z   ssh-strict: true
+2025-12-01T19:00:31.5016131Z   ssh-user: git
+2025-12-01T19:00:31.5016604Z   persist-credentials: true
+2025-12-01T19:00:31.5017125Z   clean: true
+2025-12-01T19:00:31.5017628Z   sparse-checkout-cone-mode: true
+2025-12-01T19:00:31.5018189Z   fetch-depth: 1
+2025-12-01T19:00:31.5018661Z   fetch-tags: false
+2025-12-01T19:00:31.5019137Z   show-progress: true
+2025-12-01T19:00:31.5019616Z   lfs: false
+2025-12-01T19:00:31.5020057Z   submodules: false
+2025-12-01T19:00:31.5020538Z   set-safe-directory: true
+2025-12-01T19:00:31.5021277Z ##[endgroup]
+2025-12-01T19:00:31.6173322Z Syncing repository: ***-CONTENT-CREATION
+2025-12-01T19:00:31.6176299Z ##[group]Getting Git version info
+2025-12-01T19:00:31.6178234Z Working directory is '/home/runner/work/scribal.bible-CONTENT-CREATION/scribal.bible-CONTENT-CREATION'
+2025-12-01T19:00:31.6180674Z [command]/usr/bin/git version
+2025-12-01T19:00:31.6243685Z git version 2.51.2
+2025-12-01T19:00:31.6276889Z ##[endgroup]
+2025-12-01T19:00:31.6288407Z Temporarily overriding HOME='/home/runner/work/_temp/36883cc1-6883-40bf-a536-67f087052d3d' before making global git config changes
+2025-12-01T19:00:31.6292916Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-01T19:00:31.6297228Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/scribal.bible-CONTENT-CREATION/scribal.bible-CONTENT-CREATION
+2025-12-01T19:00:31.6334777Z Deleting the contents of '/home/runner/work/scribal.bible-CONTENT-CREATION/scribal.bible-CONTENT-CREATION'
+2025-12-01T19:00:31.6339525Z ##[group]Initializing the repository
+2025-12-01T19:00:31.6346121Z [command]/usr/bin/git init /home/runner/work/scribal.bible-CONTENT-CREATION/scribal.bible-CONTENT-CREATION
+2025-12-01T19:00:31.6466308Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-12-01T19:00:31.6468616Z hint: is subject to change. To configure the initial branch name to use in all
+2025-12-01T19:00:31.6471881Z hint: of your new repositories, which will suppress this warning, call:
+2025-12-01T19:00:31.6474224Z hint:
+2025-12-01T19:00:31.6475512Z hint: 	git config --global init.defaultBranch <name>
+2025-12-01T19:00:31.6477241Z hint:
+2025-12-01T19:00:31.6478454Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-12-01T19:00:31.6480353Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-12-01T19:00:31.6481773Z hint:
+2025-12-01T19:00:31.6482851Z hint: 	git branch -m <name>
+2025-12-01T19:00:31.6483878Z hint:
+2025-12-01T19:00:31.6485131Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-12-01T19:00:31.6488243Z Initialized empty Git repository in /home/runner/work/scribal.bible-CONTENT-CREATION/scribal.bible-CONTENT-CREATION/.git/
+2025-12-01T19:00:31.6493922Z [command]/usr/bin/git remote add origin https://github.com/***-CONTENT-CREATION
+2025-12-01T19:00:31.6677968Z ##[endgroup]
+2025-12-01T19:00:31.6679599Z ##[group]Disabling automatic garbage collection
+2025-12-01T19:00:31.6683688Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-01T19:00:31.6689808Z ##[endgroup]
+2025-12-01T19:00:31.6691323Z ##[group]Setting up auth
+2025-12-01T19:00:31.6694046Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-01T19:00:31.6698067Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-01T19:00:31.7811495Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-01T19:00:31.7817054Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-01T19:00:31.7821500Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-01T19:00:31.7825275Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-01T19:00:31.7851107Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-01T19:00:31.7869434Z ##[endgroup]
+2025-12-01T19:00:31.7872125Z ##[group]Fetching the repository
+2025-12-01T19:00:31.7879824Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9680703274236c832bc7171f7f71735f0b6b36c1:refs/remotes/origin/main
+2025-12-01T19:00:31.9634365Z From https://github.com/***-CONTENT-CREATION
+2025-12-01T19:00:31.9636084Z  * [new ref]         9680703274236c832bc7171f7f71735f0b6b36c1 -> origin/main
+2025-12-01T19:00:31.9647460Z ##[endgroup]
+2025-12-01T19:00:31.9650420Z ##[group]Determining the checkout info
+2025-12-01T19:00:31.9652157Z ##[endgroup]
+2025-12-01T19:00:31.9654837Z [command]/usr/bin/git sparse-checkout disable
+2025-12-01T19:00:31.9696971Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-12-01T19:00:31.9726916Z ##[group]Checking out the ref
+2025-12-01T19:00:31.9730149Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-01T19:00:31.9778813Z Switched to a new branch 'main'
+2025-12-01T19:00:31.9783123Z branch 'main' set up to track 'origin/main'.
+2025-12-01T19:00:31.9792798Z ##[endgroup]
+2025-12-01T19:00:31.9828046Z [command]/usr/bin/git log -1 --format=%H
+2025-12-01T19:00:31.9850511Z 9680703274236c832bc7171f7f71735f0b6b36c1
+2025-12-01T19:00:32.0062282Z ##[group]Run mkdir -p scripts
+2025-12-01T19:00:32.0063327Z [36;1mmkdir -p scripts[0m
+2025-12-01T19:00:32.0063954Z [36;1mif [ -f scripts/generate-and-push.js ]; then[0m
+2025-12-01T19:00:32.0064655Z [36;1m  node scripts/generate-and-push.js[0m
+2025-12-01T19:00:32.0065258Z [36;1melse[0m
+2025-12-01T19:00:32.0065865Z [36;1m  echo "Place generate-and-push.js in scripts/ and rerun"[0m
+2025-12-01T19:00:32.0066582Z [36;1m  exit 1[0m
+2025-12-01T19:00:32.0067043Z [36;1mfi[0m
+2025-12-01T19:00:32.0102953Z shell: /usr/bin/bash -e {0}
+2025-12-01T19:00:32.0103653Z env:
+2025-12-01T19:00:32.0104386Z   GITHUB_TOKEN: ***
+2025-12-01T19:00:32.0105683Z   HOSTING_PUSH_TOKEN: ***
+2025-12-01T19:00:32.0106244Z   HOSTING_REPO: ***
+2025-12-01T19:00:32.0106700Z ##[endgroup]
+2025-12-01T19:00:32.2036827Z Fetching issues from ***-CONTENT-CREATION
+2025-12-01T19:00:32.3851435Z GitHub API error 403 {
+2025-12-01T19:00:32.3853661Z   message: 'Resource not accessible by integration',
+2025-12-01T19:00:32.3855237Z   documentation_url: 'https://docs.github.com/rest/issues/issues#list-repository-issues',
+2025-12-01T19:00:32.3856582Z   status: '403'
+2025-12-01T19:00:32.3857272Z }
+2025-12-01T19:00:32.3885769Z ##[error]Process completed with exit code 1.
+2025-12-01T19:00:32.4018040Z Post job cleanup.
+2025-12-01T19:00:32.4972843Z [command]/usr/bin/git version
+2025-12-01T19:00:32.5014861Z git version 2.51.2
+2025-12-01T19:00:32.5085507Z Temporarily overriding HOME='/home/runner/work/_temp/93e75b02-63f5-4bdb-b67a-76a2a749061a' before making global git config changes
+2025-12-01T19:00:32.5087999Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-01T19:00:32.5093567Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/scribal.bible-CONTENT-CREATION/scribal.bible-CONTENT-CREATION
+2025-12-01T19:00:32.5153281Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-01T19:00:32.5203519Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-01T19:00:32.5559699Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-01T19:00:32.5598411Z http.https://github.com/.extraheader
+2025-12-01T19:00:32.5630897Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-01T19:00:32.5670302Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-01T19:00:32.6021440Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-01T19:00:32.6079446Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-01T19:00:32.6581546Z Cleaning up orphan processes
