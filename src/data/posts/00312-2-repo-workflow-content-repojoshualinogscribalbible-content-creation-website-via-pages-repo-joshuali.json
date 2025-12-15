@@ -1,0 +1,19 @@
+{
+  "id": 312,
+  "title": "2 repo workflow = CONTENT REPO:joshualinog/scribal.bible-CONTENT-CREATION | WEBSITE VIA PAGES REPO: joshualinog/scribal.bible",
+  "slug": "2-repo-workflow-content-repojoshualinogscribalbible-content-creation-website-via-pages-repo-joshuali",
+  "author": "joshualinog",
+  "createdAt": "2025-12-01T18:33:04Z",
+  "updatedAt": "2025-12-15T19:47:11Z",
+  "labels": [
+    "isPost"
+  ],
+  "state": "closed",
+  "status": "published",
+  "excerpt": "#  2 repo workflow = CONTENT REPO:joshualinog/scribal.bible-CONTENT-CREATION | WEBSITE VIA PAGES REPO: joshualinog/scribal.bible",
+  "content": "#  2 repo workflow = CONTENT REPO:joshualinog/scribal.bible-CONTENT-CREATION | WEBSITE VIA PAGES REPO: joshualinog/scribal.bible\n\n- [ ] I create an issue on the content-creation repo.\n- [ ] i add the label `isPost`\n- [ ] if an `isPost` issue is created, updated, or deleted it triggers actions to appropriately update the `posts/` directory.\n- [ ] the content-creation repo triggers an action that creates the issue into a small .json file constructed according to a post-schema. the action places this .json file into a folder called `posts/` . this directory has all the posts as .json files.\n- [ ] the website repo is updated on a new, updated, or deleted .json file in `posts/`\n- [ ] this update (a webhook?) triggers the website repo to initiate its own actions to rebuild and deploy the site via github pages.",
+  "raw_issue": {
+    "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/312",
+    "number": 312
+  }
+}

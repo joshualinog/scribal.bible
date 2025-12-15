@@ -1,0 +1,19 @@
+{
+  "id": 318,
+  "title": "Test Post - Working Now!",
+  "slug": "test-post-working-now",
+  "author": "joshualinog",
+  "createdAt": "2025-12-15T19:45:59Z",
+  "updatedAt": "2025-12-15T19:50:29Z",
+  "labels": [
+    "isPost"
+  ],
+  "state": "open",
+  "status": "published",
+  "excerpt": "This is a test post to verify the NEW two repo workflow is working correctly.",
+  "content": "This is a test post to verify the NEW two repo workflow is working correctly.\n\nFeatures Being Tested:\n- Issue to JSON conversion\n- Automatic sync to hosting repo\n- Eleventy site rebuild  \n- GitHub Pages deployment\n\nUpdated to trigger the new workflow!",
+  "raw_issue": {
+    "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/318",
+    "number": 318
+  }
+}
