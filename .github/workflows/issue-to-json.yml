@@ -1,6 +1,8 @@
-name: Issue -> Post JSON (disabled)
+name: Issue -> Post JSON
 
-on: {}
+on:
+  issues:
+    types: [labeled]
 
 jobs:
   generate-post-json:
