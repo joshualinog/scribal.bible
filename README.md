@@ -20,16 +20,10 @@ This repository contains the website and templates for the Scribal Bible project
 
 ## Deployment
 
-This site is hosted on GitHub Pages with a custom domain (`scribal.bible`).
+This site is hosted on GitHub Pages with a custom domain (`www.scribal.bible`).
 
 ### DNS Setup (NameSilo)
 In your NameSilo account, go to Domain Manager > `scribal.bible` > DNS Records, and add:
-
-- **A Records for Apex Domain (`scribal.bible`)**:
-  - Type: A
-  - Name: `@`
-  - Target: `185.199.108.153` (TTL: default)
-  - Repeat for: `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 
 - **CNAME for www Subdomain (`www.scribal.bible`)**:
   - Type: CNAME
@@ -38,6 +32,6 @@ In your NameSilo account, go to Domain Manager > `scribal.bible` > DNS Records, 
 
 ### GitHub Pages Settings
 - Source: GitHub Actions
-- Custom Domain: `scribal.bible`
+- Custom Domain: `www.scribal.bible`
 
 DNS changes may take 1-24 hours to propagate.
