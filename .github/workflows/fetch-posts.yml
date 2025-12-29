@@ -1,6 +1,9 @@
-name: Fetch Posts from Content Repo (disabled)
+name: Fetch Posts from Content Repo
 
-on: {}
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
   fetch:
