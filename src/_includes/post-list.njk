@@ -4,7 +4,7 @@
       <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">From the blog</h2>
       <p class="mt-2 text-lg/8 text-gray-600 dark:text-gray-300">Learn how to grow your business with our expert advice.</p>
     </div>
-    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div id="post-grid" class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {% for post in pagination.items %}
       <article class="flex flex-col items-start justify-between">
         <div class="relative w-full">
@@ -41,6 +41,7 @@
       </article>
       {% endfor %}
     </div>
+    <div id="pagination-nav">
     <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 dark:border-white/10 mt-16">
       <div class="-mt-px flex w-0 flex-1">
         {% if pagination.href.previous %}
@@ -65,14 +66,16 @@
         {% set start = 2 if current-1 < 2 else current-1 %}
         {% set end = total if current+2 > total else current+2 %}
         {% for i in range(start, end + 1) %}
-        {% set page_url = "/" + i | string + "/" if i > 1 else "/" %}
+        {% set page_num = i - 1 %}
+        {% set page_url = "/" + page_num | string + "/" if page_num > 0 else "/" %}
         <a href="{{ page_url }}" class="inline-flex items-center border-t-2 {% if i == current %}border-indigo-500 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400{% else %}border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:border-white/20 dark:hover:text-gray-200{% endif %} px-4 pt-4 text-sm font-medium">{{ i }}</a>
         {% endfor %}
         {% if current < total - 2 %}
         <span class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500">...</span>
         {% endif %}
         {% if total > 1 %}
-        {% set last_url = "/" + total | string + "/" %}
+        {% set last_page_num = total - 1 %}
+        {% set last_url = "/" + last_page_num | string + "/" %}
         <a href="{{ last_url }}" class="inline-flex items-center border-t-2 {% if current == total %}border-indigo-500 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400{% else %}border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:border-white/20 dark:hover:text-gray-200{% endif %} px-4 pt-4 text-sm font-medium">{{ total }}</a>
         {% endif %}
         {% endif %}
@@ -90,5 +93,33 @@
         {% endif %}
       </div>
     </nav>
+    </div>
+    <script>
+      document.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A' && e.target.closest('#pagination-nav')) {
+          e.preventDefault();
+          const url = e.target.href;
+          fetch(url)
+            .then(response => {
+              if (!response.ok) throw new Error('Page not found');
+              return response.text();
+            })
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              const newGrid = doc.getElementById('post-grid');
+              const newNav = doc.getElementById('pagination-nav');
+              if (newGrid && newNav) {
+                document.getElementById('post-grid').innerHTML = newGrid.innerHTML;
+                document.getElementById('pagination-nav').innerHTML = newNav.innerHTML;
+                history.pushState(null, '', url);
+                // Scroll to the top of the post list smoothly
+                document.getElementById('post-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            })
+            .catch(err => console.error('Error loading page:', err));
+        }
+      });
+    </script>
   </div>
 </div>
