@@ -35,6 +35,55 @@ async function api(pathname) {
   return res.json();
 }
 
+async function graphql(query, variables = {}) {
+  const headers = {
+    'Content-Type': 'application/json',
+    'User-Agent': 'scribal-fetch-script'
+  };
+  if (TOKEN) headers['Authorization'] = `bearer ${TOKEN}`;
+  const res = await fetch(`${GITHUB_API}/graphql`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ query, variables })
+  });
+  if (!res.ok) {
+    const txt = await res.text();
+    throw new Error(`GraphQL error ${res.status}: ${txt}`);
+  }
+  const json = await res.json();
+  if (json.errors) throw new Error(`GraphQL errors: ${JSON.stringify(json.errors)}`);
+  return json.data;
+}
+
+async function fetchAllIssues(owner, repo, labelFilters) {
+  const labelsArg = labelFilters.length ? `labels: ${JSON.stringify(labelFilters)},` : '';
+  const query = `
+    query($owner: String!, $repo: String!, $after: String) {
+      repository(owner: $owner, name: $repo) {
+        issues(first: 100, states: OPEN, ${labelsArg} after: $after) {
+          pageInfo { hasNextPage endCursor }
+          nodes {
+            number title body state url createdAt updatedAt
+            labels(first: 20) { nodes { name } }
+            comments(first: 50) { nodes { author { login } body createdAt } }
+          }
+        }
+      }
+    }
+  `;
+  const [owner_, repo_] = [owner, repo];
+  let after = null;
+  const results = [];
+  do {
+    const data = await graphql(query, { owner: owner_, repo: repo_, after });
+    const { nodes, pageInfo } = data.repository.issues;
+    results.push(...nodes);
+    after = pageInfo.hasNextPage ? pageInfo.endCursor : null;
+    console.log(`Fetched ${results.length} issues so far...`);
+  } while (after);
+  return results;
+}
+
 async function downloadFile(url, destPath) {
   const headers = {};
   if (TOKEN) headers['Authorization'] = `token ${TOKEN}`;
@@ -54,7 +103,9 @@ async function processIssue(issue) {
   const id = issue.number;
   const title = issue.title || `Post ${id}`;
   const slug = slugify(issue.title || `post-${id}`) + `-${id}`;
-  const labels = (issue.labels || []).map(l => (typeof l === 'string' ? l : l.name)).filter(Boolean);
+  // Support both REST (labels[].name) and GraphQL (labels.nodes[].name) shapes
+  const rawLabels = issue.labels?.nodes || issue.labels || [];
+  const labels = rawLabels.map(l => (typeof l === 'string' ? l : l.name)).filter(Boolean);
   const tags = labels.filter(l => !['POST','isPost'].includes(l));
 
   let body = issue.body || '';
@@ -80,15 +131,29 @@ async function processIssue(issue) {
     }
   }
 
-  const comments = await fetchComments(id);
+  // Support both REST and GraphQL comment shapes
+  let comments;
+  if (issue.comments?.nodes) {
+    comments = issue.comments.nodes.map(c => ({
+      author: c.author?.login || null,
+      body: c.body || '',
+      created_at: c.createdAt
+    }));
+  } else {
+    comments = await fetchComments(id);
+  }
+
+  // Support both REST (snake_case) and GraphQL (camelCase) date fields
+  const created_at = issue.created_at || issue.createdAt;
+  const updated_at = issue.updated_at || issue.updatedAt || created_at;
 
   const out = {
     id,
     title,
     slug,
-    author: { login: issue.user?.login || null, id: issue.user?.id || null, url: issue.user?.html_url || null },
-    created_at: issue.created_at,
-    updated_at: issue.updated_at || issue.created_at,
+    author: { login: issue.user?.login || null, id: issue.user?.id || null, url: issue.user?.html_url || issue.url || null },
+    created_at,
+    updated_at,
     body,
     comments,
     labels,
@@ -110,16 +175,10 @@ async function processIssue(issue) {
 
 async function main() {
   console.log('Fetching issues from', CONTENT_REPO, 'labels=', LABELS);
-  const labelsQuery = LABELS.map(encodeURIComponent).join(',');
-  const issues = await api(`/repos/${CONTENT_REPO}/issues?state=open&labels=${labelsQuery}&per_page=100`);
-  if (!Array.isArray(issues)) {
-    console.error('unexpected issues response', issues);
-    return;
-  }
-  console.log(`Found ${issues.length} issues`);
+  const [owner, repo] = CONTENT_REPO.split('/');
+  const issues = await fetchAllIssues(owner, repo, LABELS);
+  console.log(`Found ${issues.length} matching issues`);
   for (const issue of issues) {
-    // skip pull requests
-    if (issue.pull_request) continue;
     try {
       await processIssue(issue);
     } catch (err) {

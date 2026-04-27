@@ -1,0 +1,58 @@
+{
+  "id": 149,
+  "title": "diagramming Foundation models",
+  "slug": "diagramming-foundation-models-149",
+  "author": {
+    "login": null,
+    "id": null,
+    "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/149"
+  },
+  "created_at": "2025-05-30T14:39:07Z",
+  "updated_at": "2025-11-07T21:11:28Z",
+  "body": "![20250530_103711~2.jpg](/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b)\n\n![20250530_103643.jpg](/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d)\n\n",
+  "comments": [
+    {
+      "author": "joshualinog",
+      "body": "Pictograms or hieroglyphics as an initial scribble work, as a metaphor for the drafting conceptualization contribution of a given scribe. \n\n### block talk \nBecause pictograms were the initial scribal tool, diagramming linguistic concepts through small representative icons is an ancient practice. Could we benefit from producing our own pictograms toward the goal of teaching foundation? Almost like teaching a language through pictures.",
+      "created_at": "2025-06-01T15:45:03Z"
+    }
+  ],
+  "labels": [
+    "🗣💎📜 TEN WORDS",
+    "♾️⁷🌈 SEVEN SPACES | 7",
+    "🌈⃤✨ FOUNDATION",
+    "isPost"
+  ],
+  "tags": [
+    "🗣💎📜 TEN WORDS",
+    "♾️⁷🌈 SEVEN SPACES | 7",
+    "🌈⃤✨ FOUNDATION"
+  ],
+  "main_category": "🗣💎📜 TEN WORDS",
+  "post_type": "article",
+  "media": [
+    {
+      "type": "image",
+      "filename": "80fea587-ce02-4e05-9547-1f9addb61b2b",
+      "url": "/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b"
+    },
+    {
+      "type": "image",
+      "filename": "f1d7617f-09ce-4c6e-bb4e-d26431304f1d",
+      "url": "/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d"
+    }
+  ],
+  "assets": [
+    {
+      "path": "/workspaces/scribal.bible/src/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b",
+      "url": "/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b"
+    },
+    {
+      "path": "/workspaces/scribal.bible/src/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d",
+      "url": "/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d"
+    }
+  ],
+  "excerpt": "![20250530_103711~2.jpg](https://github.com/user-attachments/assets/80fea587-ce02-4e05-9547-1f9addb61b2b)",
+  "draft": false,
+  "custom": {}
+}
