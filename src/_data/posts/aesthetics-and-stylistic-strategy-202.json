@@ -9,7 +9,7 @@
   },
   "created_at": "2025-07-05T19:19:32Z",
   "updated_at": "2025-12-11T18:15:10Z",
-  "body": "# strategies\n- realistic faces figures done with oil sticks along side lined Egyptian art and lined hieroglyphics in collage unity...???\n- brightly tiled sections where tiles themselves are the division point, some tiles possessing realistic figures alongside these lined styles tiles like these two images combined: \n![fb21772605d63af950e177dd15bf514a.jpg](/assets/posts/aesthetics-and-stylistic-strategy-202/ae389598-f6a1-48bc-91ca-55be5df68684)\n\n![961270ccaa5f310a7de32fc77606624c.jpg](/assets/posts/aesthetics-and-stylistic-strategy-202/966050c4-0293-47fa-b585-13bda7f0c91e)\n\n\n\n",
+  "body": "# strategies\n- realistic faces figures done with oil sticks along side lined Egyptian art and lined hieroglyphics in collage unity...???\n- brightly tiled sections where tiles themselves are the division point, some tiles possessing realistic figures alongside these lined styles tiles like these two images combined: \n![fb21772605d63af950e177dd15bf514a.jpg](https://github.com/user-attachments/assets/ae389598-f6a1-48bc-91ca-55be5df68684)\n\n![961270ccaa5f310a7de32fc77606624c.jpg](https://github.com/user-attachments/assets/966050c4-0293-47fa-b585-13bda7f0c91e)\n\n\n\n",
   "comments": [
     {
       "author": "joshualinog",
@@ -23,28 +23,8 @@
   "tags": [],
   "main_category": null,
   "post_type": "article",
-  "media": [
-    {
-      "type": "image",
-      "filename": "ae389598-f6a1-48bc-91ca-55be5df68684",
-      "url": "/assets/posts/aesthetics-and-stylistic-strategy-202/ae389598-f6a1-48bc-91ca-55be5df68684"
-    },
-    {
-      "type": "image",
-      "filename": "966050c4-0293-47fa-b585-13bda7f0c91e",
-      "url": "/assets/posts/aesthetics-and-stylistic-strategy-202/966050c4-0293-47fa-b585-13bda7f0c91e"
-    }
-  ],
-  "assets": [
-    {
-      "path": "/workspaces/scribal.bible/src/assets/posts/aesthetics-and-stylistic-strategy-202/ae389598-f6a1-48bc-91ca-55be5df68684",
-      "url": "/assets/posts/aesthetics-and-stylistic-strategy-202/ae389598-f6a1-48bc-91ca-55be5df68684"
-    },
-    {
-      "path": "/workspaces/scribal.bible/src/assets/posts/aesthetics-and-stylistic-strategy-202/966050c4-0293-47fa-b585-13bda7f0c91e",
-      "url": "/assets/posts/aesthetics-and-stylistic-strategy-202/966050c4-0293-47fa-b585-13bda7f0c91e"
-    }
-  ],
+  "media": [],
+  "assets": [],
   "excerpt": "# strategies",
   "draft": false,
   "custom": {}

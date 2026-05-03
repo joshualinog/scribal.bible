@@ -9,7 +9,7 @@
   },
   "created_at": "2025-05-30T14:39:07Z",
   "updated_at": "2025-11-07T21:11:28Z",
-  "body": "![20250530_103711~2.jpg](/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b)\n\n![20250530_103643.jpg](/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d)\n\n",
+  "body": "![20250530_103711~2.jpg](https://github.com/user-attachments/assets/80fea587-ce02-4e05-9547-1f9addb61b2b)\n\n![20250530_103643.jpg](https://github.com/user-attachments/assets/f1d7617f-09ce-4c6e-bb4e-d26431304f1d)\n\n",
   "comments": [
     {
       "author": "joshualinog",
@@ -30,28 +30,8 @@
   ],
   "main_category": "🗣💎📜 TEN WORDS",
   "post_type": "article",
-  "media": [
-    {
-      "type": "image",
-      "filename": "80fea587-ce02-4e05-9547-1f9addb61b2b",
-      "url": "/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b"
-    },
-    {
-      "type": "image",
-      "filename": "f1d7617f-09ce-4c6e-bb4e-d26431304f1d",
-      "url": "/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d"
-    }
-  ],
-  "assets": [
-    {
-      "path": "/workspaces/scribal.bible/src/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b",
-      "url": "/assets/posts/diagramming-foundation-models-149/80fea587-ce02-4e05-9547-1f9addb61b2b"
-    },
-    {
-      "path": "/workspaces/scribal.bible/src/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d",
-      "url": "/assets/posts/diagramming-foundation-models-149/f1d7617f-09ce-4c6e-bb4e-d26431304f1d"
-    }
-  ],
+  "media": [],
+  "assets": [],
   "excerpt": "![20250530_103711~2.jpg](https://github.com/user-attachments/assets/80fea587-ce02-4e05-9547-1f9addb61b2b)",
   "draft": false,
   "custom": {}

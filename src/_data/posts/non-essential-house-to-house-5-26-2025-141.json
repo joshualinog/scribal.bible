@@ -9,7 +9,7 @@
   },
   "created_at": "2025-05-26T23:39:44Z",
   "updated_at": "2025-11-07T21:11:15Z",
-  "body": "![20250526_192328.jpg](/assets/posts/non-essential-house-to-house-5-26-2025-141/4ce27733-c280-45f0-a6f5-41959daae82a)\n\n",
+  "body": "![20250526_192328.jpg](https://github.com/user-attachments/assets/4ce27733-c280-45f0-a6f5-41959daae82a)\n\n",
   "comments": [
     {
       "author": "joshualinog",
@@ -23,19 +23,8 @@
   "tags": [],
   "main_category": null,
   "post_type": "article",
-  "media": [
-    {
-      "type": "image",
-      "filename": "4ce27733-c280-45f0-a6f5-41959daae82a",
-      "url": "/assets/posts/non-essential-house-to-house-5-26-2025-141/4ce27733-c280-45f0-a6f5-41959daae82a"
-    }
-  ],
-  "assets": [
-    {
-      "path": "/workspaces/scribal.bible/src/assets/posts/non-essential-house-to-house-5-26-2025-141/4ce27733-c280-45f0-a6f5-41959daae82a",
-      "url": "/assets/posts/non-essential-house-to-house-5-26-2025-141/4ce27733-c280-45f0-a6f5-41959daae82a"
-    }
-  ],
+  "media": [],
+  "assets": [],
   "excerpt": "![20250526_192328.jpg](https://github.com/user-attachments/assets/4ce27733-c280-45f0-a6f5-41959daae82a)",
   "draft": false,
   "custom": {}
