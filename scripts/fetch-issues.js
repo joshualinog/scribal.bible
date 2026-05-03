@@ -102,7 +102,8 @@ async function fetchComments(issueNumber) {
 async function processIssue(issue) {
   const id = issue.number;
   const title = issue.title || `Post ${id}`;
-  const slug = slugify(issue.title || `post-${id}`) + `-${id}`;
+  const titleSlug = slugify(issue.title || `post-${id}`).slice(0, 200).replace(/-+$/, '');
+  const slug = `${titleSlug}-${id}`;
   // Support both REST (labels[].name) and GraphQL (labels.nodes[].name) shapes
   const rawLabels = issue.labels?.nodes || issue.labels || [];
   const labels = rawLabels.map(l => (typeof l === 'string' ? l : l.name)).filter(Boolean);
