@@ -8,7 +8,7 @@ const GITHUB_API = 'https://api.github.com';
 const TOKEN = process.env.CONTENT_TOKEN || process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 const CONTENT_REPO = process.env.CONTENT_REPO || 'joshualinog/scribal.bible-CONTENT-CREATION';
 const LABELS = (process.env.POST_LABELS || 'POST,isPost').split(',').map(s => s.trim()).filter(Boolean);
-const OUT_DIR = path.resolve(process.cwd(), 'src', '_data', 'posts');
+const OUT_DIR = path.resolve(process.cwd(), 'src', 'data', 'posts');
 const ASSETS_ROOT = path.resolve(process.cwd(), 'src', 'assets', 'posts');
 
 function slugify(s) {
