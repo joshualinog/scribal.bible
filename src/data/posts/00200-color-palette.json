@@ -1,0 +1,19 @@
+{
+  "id": 200,
+  "title": "Color palette",
+  "slug": "color-palette",
+  "author": "joshualinog",
+  "createdAt": "2025-07-05T19:04:42Z",
+  "updatedAt": "2025-11-07T21:12:50Z",
+  "labels": [
+    "isPost"
+  ],
+  "state": "open",
+  "status": "published",
+  "excerpt": "https://github.com/joshualinog/village-model-shared/issues/73",
+  "content": "https://github.com/joshualinog/village-model-shared/issues/73",
+  "raw_issue": {
+    "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/200",
+    "number": 200
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": 162,
+  "title": "THE BIBLE | A PRIMER",
+  "slug": "the-bible-a-primer",
+  "author": "joshualinog",
+  "createdAt": "2025-06-03T19:44:23Z",
+  "updatedAt": "2025-11-07T21:11:46Z",
+  "labels": [
+    "why the Bible?",
+    "what is the bible?",
+    "teach me how to use the Bible",
+    "the Bible as a tool",
+    "isPost"
+  ],
+  "state": "open",
+  "status": "published",
+  "excerpt": "",
+  "content": "",
+  "raw_issue": {
+    "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/162",
+    "number": 162
+  }
+}
