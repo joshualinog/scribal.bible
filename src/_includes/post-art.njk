@@ -1,12 +1,11 @@
 {# post-art.njk — Art post template #}
 <article class="bg-white dark:bg-gray-900 min-h-screen">
 
-  {# Full-width image hero #}
-  {% if post.mainImage %}
-    <div class="relative w-full bg-gray-950">
-      <img src="{{ post.mainImage }}" alt="{{ post.title }}" class="w-full max-h-[70vh] object-contain" />
-    </div>
-  {% endif %}
+  {# Full-width image hero — falls back to per-template default if no mainImage is set #}
+  {% set _heroImg = post.mainImage if post.mainImage else defaultImages['art'][post.id % defaultImages['art'].length] %}
+  <div class="relative w-full bg-gray-950">
+    <img src="{{ _heroImg }}" alt="{{ post.title }}" class="w-full max-h-[70vh] object-contain" />
+  </div>
 
   {# Header #}
   <div class="border-b border-gray-200 dark:border-white/10">

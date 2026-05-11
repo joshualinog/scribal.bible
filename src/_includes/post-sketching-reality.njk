@@ -32,12 +32,11 @@
     </div>
   </div>
 
-  {# Main image — maps and sketches take center stage #}
-  {% if post.mainImage %}
-    <div class="mx-auto max-w-5xl px-6 pt-10 lg:px-8">
-      <img src="{{ post.mainImage }}" alt="{{ post.title }}" class="w-full rounded-2xl object-contain shadow-lg ring-1 ring-gray-900/10 dark:ring-white/10 bg-gray-50 dark:bg-gray-800" />
-    </div>
-  {% endif %}
+  {# Main image — maps and sketches take center stage; falls back to default if no mainImage #}
+  {% set _heroImg = post.mainImage if post.mainImage else defaultImages['sketching-reality'][post.id % defaultImages['sketching-reality'].length] %}
+  <div class="mx-auto max-w-5xl px-6 pt-10 lg:px-8">
+    <img src="{{ _heroImg }}" alt="{{ post.title }}" class="w-full rounded-2xl object-contain shadow-lg ring-1 ring-gray-900/10 dark:ring-white/10 bg-gray-50 dark:bg-gray-800" />
+  </div>
 
   {# Body #}
   <div class="mx-auto max-w-3xl px-6 py-12 lg:px-8">

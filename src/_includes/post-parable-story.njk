@@ -26,12 +26,11 @@
     </div>
   </div>
 
-  {# Main image #}
-  {% if post.mainImage %}
-    <div class="mx-auto max-w-3xl px-6 pt-10 lg:px-8">
-      <img src="{{ post.mainImage }}" alt="{{ post.title }}" class="w-full rounded-2xl object-cover shadow-lg ring-1 ring-gray-900/10 dark:ring-white/10" />
-    </div>
-  {% endif %}
+  {# Main image — falls back to per-template default if no mainImage is set #}
+  {% set _heroImg = post.mainImage if post.mainImage else defaultImages['parable-story'][post.id % defaultImages['parable-story'].length] %}
+  <div class="mx-auto max-w-3xl px-6 pt-10 lg:px-8">
+    <img src="{{ _heroImg }}" alt="{{ post.title }}" class="w-full rounded-2xl object-cover shadow-lg ring-1 ring-gray-900/10 dark:ring-white/10" />
+  </div>
 
   {# Tags #}
   {% if post.tags and post.tags.length %}
