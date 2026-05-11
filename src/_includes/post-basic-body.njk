@@ -1,0 +1,103 @@
+{# post-basic-body.njk — default catch-all post template #}
+<article class="bg-white dark:bg-gray-900 min-h-screen">
+
+  {# Header #}
+  <div class="relative isolate overflow-hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-white/10">
+    <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+
+      {# Meta row: date + category #}
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs mb-6">
+        {% if post.date %}
+          <time datetime="{{ post.date }}" class="text-gray-500 dark:text-gray-400">
+            {{ post.date | date("MMM dd, yyyy") }}
+          </time>
+        {% endif %}
+        {% if post.category %}
+          <span class="rounded-full bg-indigo-50 px-3 py-1 font-semibold text-indigo-600 ring-1 ring-indigo-600/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/25">
+            {{ post.category }}
+          </span>
+        {% endif %}
+      </div>
+
+      {# Title #}
+      <h1 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
+        {{ post.title }}
+      </h1>
+
+      {% if post.description %}
+        <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">{{ post.description }}</p>
+      {% endif %}
+
+      {# Author #}
+      {% if post.author %}
+        <div class="mt-8 flex items-center gap-x-3">
+          <div class="text-sm">
+            <p class="font-semibold text-gray-900 dark:text-white">{{ post.author }}</p>
+          </div>
+        </div>
+      {% endif %}
+
+      {# Tags #}
+      {% if post.tags and post.tags.length %}
+        <div class="mt-6 flex flex-wrap gap-2">
+          {% for tag in post.tags %}
+            {% if tag != "isPost" %}
+              <span class="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600 dark:bg-white/10 dark:text-gray-400">
+                {{ tag }}
+              </span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {# Main image #}
+  {% if post.mainImage %}
+    <div class="mx-auto max-w-3xl px-6 pt-10 lg:px-8">
+      <img src="{{ post.mainImage }}" alt="{{ post.title }}" class="w-full rounded-2xl object-cover shadow-lg ring-1 ring-gray-900/10 dark:ring-white/10" />
+    </div>
+  {% endif %}
+
+  {# Body #}
+  <div class="mx-auto max-w-3xl px-6 py-12 lg:px-8">
+    {% if post.bible %}
+      <div class="mb-8 rounded-lg bg-indigo-50 px-5 py-4 ring-1 ring-indigo-200 dark:bg-indigo-500/10 dark:ring-indigo-500/25">
+        <p class="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400 mb-1">Scripture</p>
+        <p class="text-sm text-indigo-900 dark:text-indigo-200">{{ post.bible | join(", ") }}</p>
+      </div>
+    {% endif %}
+
+    <div class="prose prose-gray prose-lg dark:prose-invert max-w-none
+                prose-headings:font-semibold prose-headings:tracking-tight
+                prose-a:text-indigo-600 dark:prose-a:text-indigo-400
+                prose-strong:text-gray-900 dark:prose-strong:text-white">
+      {{ post.body | markdownify | safe }}
+    </div>
+
+    {% if post.links %}
+      <div class="mt-12 border-t border-gray-200 pt-8 dark:border-white/10">
+        <p class="text-sm font-semibold text-gray-900 dark:text-white mb-3">Links</p>
+        <ul class="space-y-1">
+          {% for link in post.links %}
+            <li>
+              <a href="{{ link }}" class="text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300 break-all">{{ link }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+
+  {# Back link #}
+  <div class="mx-auto max-w-3xl px-6 pb-16 lg:px-8">
+    <a href="/" class="inline-flex items-center gap-x-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="size-4" aria-hidden="true">
+        <path d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" fill-rule="evenodd" />
+      </svg>
+      All posts
+    </a>
+  </div>
+
+</article>

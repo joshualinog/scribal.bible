@@ -1,0 +1,30 @@
+---
+layout: layout.njk
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: "posts/{{ post.slug }}/index.html"
+---
+
+{% set template = post.template %}
+
+{% if template == "youtube" %}
+  {% include "post-youtube.njk" %}
+{% elif template == "foundation" %}
+  {% include "post-foundation.njk" %}
+{% elif template == "bible-study" %}
+  {% include "post-bible-study.njk" %}
+{% elif template == "short-quote" %}
+  {% include "post-short-quote.njk" %}
+{% elif template == "art" %}
+  {% include "post-art.njk" %}
+{% elif template == "sketching-reality" %}
+  {% include "post-sketching-reality.njk" %}
+{% elif template == "practice-tutorial" %}
+  {% include "post-practice-tutorial.njk" %}
+{% elif template == "parable-story" %}
+  {% include "post-parable-story.njk" %}
+{% else %}
+  {% include "post-basic-body.njk" %}
+{% endif %}

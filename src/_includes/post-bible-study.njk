@@ -1,0 +1,90 @@
+{# post-bible-study.njk — Bible study / essay template #}
+<article class="bg-white dark:bg-gray-900 min-h-screen">
+
+  {# Header with scripture-focused styling #}
+  <div class="relative isolate overflow-hidden bg-indigo-950 dark:bg-gray-950">
+    <div class="absolute inset-0 -z-10 opacity-20" aria-hidden="true">
+      <svg class="size-full stroke-white/10" fill="none">
+        <defs><pattern id="grid-bible" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse"><path d="M.5 200V.5H200" fill="none"/></pattern></defs>
+        <rect width="100%" height="100%" fill="url(#grid-bible)" stroke-width="0"/>
+      </svg>
+    </div>
+    <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs mb-6">
+        {% if post.date %}
+          <time datetime="{{ post.date }}" class="text-indigo-300">{{ post.date | date("MMM dd, yyyy") }}</time>
+        {% endif %}
+        {% if post.category %}
+          <span class="rounded-full bg-indigo-500/20 px-3 py-1 font-semibold text-indigo-300 ring-1 ring-indigo-400/30 ring-inset">{{ post.category }}</span>
+        {% endif %}
+        <span class="rounded-full bg-white/10 px-3 py-1 font-semibold text-white/70 ring-1 ring-white/20 ring-inset">Bible Study</span>
+      </div>
+      <h1 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">{{ post.title }}</h1>
+      {% if post.description %}
+        <p class="mt-6 text-lg text-indigo-200">{{ post.description }}</p>
+      {% endif %}
+      {% if post.author %}
+        <p class="mt-8 text-sm font-semibold text-indigo-300">{{ post.author }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  {# Scripture callout — prominent for bible-study #}
+  {% if post.bible %}
+    <div class="mx-auto max-w-3xl px-6 lg:px-8">
+      <div class="-mt-px border border-indigo-200 dark:border-indigo-500/30 rounded-b-2xl bg-indigo-50 dark:bg-indigo-500/10 px-6 py-5">
+        <p class="text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-2">Key Passages</p>
+        <p class="text-base font-medium text-indigo-900 dark:text-indigo-200">{{ post.bible | join(" · ") }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+  {# Main image #}
+  {% if post.mainImage %}
+    <div class="mx-auto max-w-3xl px-6 pt-10 lg:px-8">
+      <img src="{{ post.mainImage }}" alt="{{ post.title }}" class="w-full rounded-2xl object-cover shadow-lg ring-1 ring-gray-900/10 dark:ring-white/10" />
+    </div>
+  {% endif %}
+
+  {# Tags #}
+  {% if post.tags and post.tags.length %}
+    <div class="mx-auto max-w-3xl px-6 pt-8 lg:px-8 flex flex-wrap gap-2">
+      {% for tag in post.tags %}
+        {% if tag != "isPost" %}
+          <span class="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600 dark:bg-white/10 dark:text-gray-400">{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {# Body #}
+  <div class="mx-auto max-w-3xl px-6 py-12 lg:px-8">
+    <div class="prose prose-gray prose-lg dark:prose-invert max-w-none
+                prose-headings:font-semibold prose-headings:tracking-tight
+                prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-white/10 prose-h2:pb-2
+                prose-a:text-indigo-600 dark:prose-a:text-indigo-400
+                prose-blockquote:border-l-indigo-500 prose-blockquote:bg-indigo-50 prose-blockquote:px-4 prose-blockquote:py-1 prose-blockquote:rounded-r-lg dark:prose-blockquote:bg-indigo-500/10
+                prose-strong:text-gray-900 dark:prose-strong:text-white">
+      {{ post.body | markdownify | safe }}
+    </div>
+
+    {% if post.links %}
+      <div class="mt-12 border-t border-gray-200 pt-8 dark:border-white/10">
+        <p class="text-sm font-semibold text-gray-900 dark:text-white mb-3">Further Reading</p>
+        <ul class="space-y-1">
+          {% for link in post.links %}
+            <li><a href="{{ link }}" class="text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300 break-all">{{ link }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="mx-auto max-w-3xl px-6 pb-16 lg:px-8">
+    <a href="/" class="inline-flex items-center gap-x-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="size-4" aria-hidden="true"><path d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" fill-rule="evenodd" /></svg>
+      All posts
+    </a>
+  </div>
+
+</article>

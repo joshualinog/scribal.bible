@@ -1,0 +1,67 @@
+{# post-short-quote.njk — Short quote / aphorism template #}
+<article class="bg-white dark:bg-gray-900 min-h-screen flex flex-col">
+
+  {# Centered quote display #}
+  <div class="flex-1 flex items-center justify-center py-24 px-6">
+    <div class="mx-auto max-w-2xl text-center">
+
+      {# Meta #}
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs mb-10">
+        {% if post.date %}
+          <time datetime="{{ post.date }}" class="text-gray-500 dark:text-gray-400">{{ post.date | date("MMM dd, yyyy") }}</time>
+        {% endif %}
+        {% if post.category %}
+          <span class="rounded-full bg-indigo-50 px-3 py-1 font-semibold text-indigo-600 ring-1 ring-indigo-600/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/25">{{ post.category }}</span>
+        {% endif %}
+      </div>
+
+      {# Large opening quote mark #}
+      <svg aria-hidden="true" class="mx-auto mb-6 size-12 text-indigo-200 dark:text-indigo-800" fill="currentColor" viewBox="0 0 32 32">
+        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+      </svg>
+
+      {# Title as the quote #}
+      <p class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl dark:text-white text-balance">
+        {{ post.title }}
+      </p>
+
+      {% if post.author %}
+        <p class="mt-8 text-base font-medium text-gray-500 dark:text-gray-400">— {{ post.author }}</p>
+      {% endif %}
+
+      {% if post.bible %}
+        <p class="mt-4 text-sm text-indigo-600 dark:text-indigo-400">{{ post.bible | join(" · ") }}</p>
+      {% endif %}
+
+      {# Tags #}
+      {% if post.tags and post.tags.length %}
+        <div class="mt-8 flex flex-wrap justify-center gap-2">
+          {% for tag in post.tags %}
+            {% if tag != "isPost" %}
+              <span class="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600 dark:bg-white/10 dark:text-gray-400">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {# Optional body (elaboration below the quote) #}
+  {% if post.body and post.body | trim %}
+    <div class="border-t border-gray-200 dark:border-white/10">
+      <div class="mx-auto max-w-3xl px-6 py-12 lg:px-8">
+        <div class="prose prose-gray prose-lg dark:prose-invert max-w-none prose-headings:font-semibold prose-a:text-indigo-600 dark:prose-a:text-indigo-400">
+          {{ post.body | markdownify | safe }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="mx-auto max-w-3xl w-full px-6 pb-16 lg:px-8">
+    <a href="/" class="inline-flex items-center gap-x-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="size-4" aria-hidden="true"><path d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" fill-rule="evenodd" /></svg>
+      All posts
+    </a>
+  </div>
+
+</article>
