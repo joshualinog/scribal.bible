@@ -3,8 +3,21 @@
   "title": "Making Tracts ( Evangelism , Information Dispensing , Conversation Starting )",
   "slug": "making-tracts-evangelism-information-dispensing-conversation-starting",
   "author": "joshualinog",
+  "date": "2025-05-14T19:47:43Z",
   "createdAt": "2025-05-14T19:47:43Z",
   "updatedAt": "2025-11-07T21:10:28Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "📝📢📰 Tracts",
+    "isPost"
+  ],
   "labels": [
     "📝📢📰 Tracts",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "# Making Tracts ( Evangelism , Information Dispensing , Conversation Starting )",
+  "body": "# Making Tracts ( Evangelism , Information Dispensing , Conversation Starting )",
   "content": "# Making Tracts ( Evangelism , Information Dispensing , Conversation Starting )",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/111",

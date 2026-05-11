@@ -3,14 +3,27 @@
   "title": "how much time have you spent in hours thinking about the neighborhood of these three questions about the Bible?",
   "slug": "how-much-time-have-you-spent-in-hours-thinking-about-the-neighborhood-of-these-three-questions-about",
   "author": "joshualinog",
+  "date": "2025-04-25T19:24:54Z",
   "createdAt": "2025-04-25T19:24:54Z",
   "updatedAt": "2025-11-07T21:09:07Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "1. what is the Bible 2. from my perspective what should my relationship to the Bible be? 3. from God's perspective what should my relationship to the Bible be?",
+  "body": "1. what is the Bible\n2. from my perspective what should my relationship to the Bible be?\n3. from God's perspective what should my relationship to the Bible be?",
   "content": "1. what is the Bible\n2. from my perspective what should my relationship to the Bible be?\n3. from God's perspective what should my relationship to the Bible be?",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/51",

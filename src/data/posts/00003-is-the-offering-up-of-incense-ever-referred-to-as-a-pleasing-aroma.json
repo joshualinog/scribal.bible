@@ -3,8 +3,21 @@
   "title": "Is the offering up of incense ever referred to as a pleasing aroma?",
   "slug": "is-the-offering-up-of-incense-ever-referred-to-as-a-pleasing-aroma",
   "author": "joshualinog",
+  "date": "2025-01-23T17:01:46Z",
   "createdAt": "2025-01-23T17:01:46Z",
   "updatedAt": "2025-11-13T19:11:39Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
+    "isPost"
+  ],
   "labels": [
     "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/3",

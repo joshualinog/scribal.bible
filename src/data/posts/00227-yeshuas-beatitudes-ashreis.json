@@ -3,16 +3,30 @@
   "title": "Yeshua's beatitudes / ashreis",
   "slug": "yeshuas-beatitudes-ashreis",
   "author": "joshualinog",
+  "date": "2025-08-16T13:22:21Z",
   "createdAt": "2025-08-16T13:22:21Z",
   "updatedAt": "2025-11-07T21:13:29Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "🌈⃤✨ FOUNDATION",
+    "isPost"
+  ],
   "labels": [
     "🌈⃤✨ FOUNDATION",
     "isPost"
   ],
   "state": "open",
   "status": "published",
-  "excerpt": "# OVERVIEW  ",
-  "content": "# OVERVIEW \n",
+  "excerpt": "# OVERVIEW",
+  "body": "# OVERVIEW",
+  "content": "# OVERVIEW",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/227",
     "number": 227

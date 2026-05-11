@@ -3,8 +3,21 @@
   "title": "Ontological Primers Explored",
   "slug": "ontological-primers-explored",
   "author": "joshualinog",
+  "date": "2025-06-03T19:18:44Z",
   "createdAt": "2025-06-03T19:18:44Z",
   "updatedAt": "2025-11-07T21:11:44Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "D6 - GIDEON",
+    "isPost"
+  ],
   "labels": [
     "D6 - GIDEON",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/160",

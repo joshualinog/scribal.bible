@@ -3,15 +3,28 @@
   "title": "Non-essential house to house 5-26-2025",
   "slug": "non-essential-house-to-house-5-26-2025",
   "author": "joshualinog",
+  "date": "2025-05-26T23:39:44Z",
   "createdAt": "2025-05-26T23:39:44Z",
   "updatedAt": "2025-11-07T21:11:15Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "![20250526_192328.jpg](https://github.com/user-attachments/assets/4ce27733-c280-45f0-a6f5-41959daae82a)",
-  "content": "![20250526_192328.jpg](https://github.com/user-attachments/assets/4ce27733-c280-45f0-a6f5-41959daae82a)\n\n",
+  "body": "![20250526_192328.jpg](https://github.com/user-attachments/assets/4ce27733-c280-45f0-a6f5-41959daae82a)",
+  "content": "![20250526_192328.jpg](https://github.com/user-attachments/assets/4ce27733-c280-45f0-a6f5-41959daae82a)",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/141",
     "number": 141

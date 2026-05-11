@@ -3,14 +3,27 @@
   "title": "💐 S4 GUT ♾️⁷🌈",
   "slug": "s4-gut",
   "author": "joshualinog",
+  "date": "2025-05-15T12:23:20Z",
   "createdAt": "2025-05-15T12:23:20Z",
   "updatedAt": "2025-11-07T21:10:35Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "# 💐 S4 GUT ♾️⁷🌈",
+  "body": "# 💐 S4 GUT ♾️⁷🌈",
   "content": "# 💐 S4 GUT ♾️⁷🌈",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/116",

@@ -3,14 +3,27 @@
   "title": "Board Study Ezekiel 4-27-2025",
   "slug": "board-study-ezekiel-4-27-2025",
   "author": "joshualinog",
+  "date": "2025-04-27T17:44:35Z",
   "createdAt": "2025-04-27T17:44:35Z",
   "updatedAt": "2025-11-07T21:09:20Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/61",

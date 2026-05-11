@@ -3,8 +3,21 @@
   "title": "what is fear?",
   "slug": "what-is-fear",
   "author": "joshualinog",
+  "date": "2025-04-29T20:41:55Z",
   "createdAt": "2025-04-29T20:41:55Z",
   "updatedAt": "2025-11-07T21:09:31Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
+    "isPost"
+  ],
   "labels": [
     "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "why does Fear exist? is it because harm exists? because evil exists?",
+  "body": "why does Fear exist?\nis it because harm exists? because evil exists?",
   "content": "why does Fear exist?\nis it because harm exists? because evil exists?",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/69",

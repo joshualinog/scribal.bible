@@ -3,8 +3,21 @@
   "title": "what is pain?",
   "slug": "what-is-pain",
   "author": "joshualinog",
+  "date": "2025-04-29T20:38:11Z",
   "createdAt": "2025-04-29T20:38:11Z",
   "updatedAt": "2025-11-07T21:09:28Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
+    "isPost"
+  ],
   "labels": [
     "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/67",

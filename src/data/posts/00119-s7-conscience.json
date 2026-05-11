@@ -3,14 +3,27 @@
   "title": "🛐 S7 CONSCIENCE ♾️⁷🌈",
   "slug": "s7-conscience",
   "author": "joshualinog",
+  "date": "2025-05-15T12:23:59Z",
   "createdAt": "2025-05-15T12:23:59Z",
   "updatedAt": "2025-11-07T21:10:40Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "# 🛐 S7 CONSCIENCE ♾️⁷🌈",
+  "body": "# 🛐 S7 CONSCIENCE ♾️⁷🌈",
   "content": "# 🛐 S7 CONSCIENCE ♾️⁷🌈",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/119",

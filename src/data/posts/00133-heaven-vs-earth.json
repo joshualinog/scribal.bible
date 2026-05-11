@@ -3,14 +3,27 @@
   "title": "heaven vs earth",
   "slug": "heaven-vs-earth",
   "author": "joshualinog",
+  "date": "2025-05-24T15:20:29Z",
   "createdAt": "2025-05-24T15:20:29Z",
   "updatedAt": "2025-11-07T21:11:01Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/133",

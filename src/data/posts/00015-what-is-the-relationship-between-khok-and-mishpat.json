@@ -3,8 +3,21 @@
   "title": "What is the relationship between khok (חק) and Mishpat (משפט)?",
   "slug": "what-is-the-relationship-between-khok-and-mishpat",
   "author": "joshualinog",
+  "date": "2025-02-01T14:22:45Z",
   "createdAt": "2025-02-01T14:22:45Z",
   "updatedAt": "2025-11-07T21:08:20Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
+    "isPost"
+  ],
   "labels": [
     "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/15",

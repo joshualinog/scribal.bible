@@ -3,8 +3,21 @@
   "title": "TEN WORDS TRANSLATION",
   "slug": "ten-words-translation",
   "author": "joshualinog",
+  "date": "2025-05-07T17:54:12Z",
   "createdAt": "2025-05-07T17:54:12Z",
   "updatedAt": "2025-11-07T21:09:53Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "🗣💎📜 TEN WORDS",
+    "isPost"
+  ],
   "labels": [
     "🗣💎📜 TEN WORDS",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "# TEN WORDS TRANSLATION (S)",
+  "body": "# TEN WORDS TRANSLATION (S)\n\n## thoughts\n- when you are translating the ten words, when you are presenting the ten words, where begin, where end?\n     - for example: deut 5:1 through 5:33\n     - or : deut 5:4 - 5:21",
   "content": "# TEN WORDS TRANSLATION (S)\n\n## thoughts\n- when you are translating the ten words, when you are presenting the ten words, where begin, where end?\n     - for example: deut 5:1 through 5:33\n     - or : deut 5:4 - 5:21",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/85",

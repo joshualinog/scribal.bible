@@ -3,8 +3,21 @@
   "title": "can I be aware of harm and not have pain? can I be aware of my own harm and not have pain?",
   "slug": "can-i-be-aware-of-harm-and-not-have-pain-can-i-be-aware-of-my-own-harm-and-not-have-pain",
   "author": "joshualinog",
+  "date": "2025-04-29T20:44:35Z",
   "createdAt": "2025-04-29T20:44:35Z",
   "updatedAt": "2025-11-07T21:09:34Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
+    "isPost"
+  ],
   "labels": [
     "﹖.ᐣ❔🔎 🕵🏻 QUESTION",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/71",

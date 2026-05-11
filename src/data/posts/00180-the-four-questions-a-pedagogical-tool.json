@@ -3,14 +3,27 @@
   "title": "The \" FOUR QUESTIONS \" / a pedagogical tool",
   "slug": "the-four-questions-a-pedagogical-tool",
   "author": "joshualinog",
+  "date": "2025-06-14T15:33:43Z",
   "createdAt": "2025-06-14T15:33:43Z",
   "updatedAt": "2025-11-07T21:12:19Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "# THE FOUR QUESTIONS  ## 1. What is a god / what is God? a god is a heaven person. ## 2. What is a human?  a human is a earth person. ## 3. What is heaven?  Heaven is a plurality of groups of layered ",
+  "body": "# THE FOUR QUESTIONS \n## 1. What is a god / what is God?\na god is a heaven person.\n## 2. What is a human? \na human is a earth person.\n## 3. What is heaven? \nHeaven is a plurality of groups of layered places.\n## 4. What is earth?\nEarth is a single group of layered places.",
   "content": "# THE FOUR QUESTIONS \n## 1. What is a god / what is God?\na god is a heaven person.\n## 2. What is a human? \na human is a earth person.\n## 3. What is heaven? \nHeaven is a plurality of groups of layered places.\n## 4. What is earth?\nEarth is a single group of layered places.",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/180",

@@ -3,8 +3,21 @@
   "title": "SEVEN SPACES - IMAGE OF GOD | PATTERN",
   "slug": "seven-spaces-image-of-god-pattern",
   "author": "joshualinog",
+  "date": "2025-05-15T12:21:38Z",
   "createdAt": "2025-05-15T12:21:38Z",
   "updatedAt": "2025-11-07T21:10:30Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "♾️⁷🌈 SEVEN SPACES | 7",
+    "isPost"
+  ],
   "labels": [
     "♾️⁷🌈 SEVEN SPACES | 7",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/112",

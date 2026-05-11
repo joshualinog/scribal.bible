@@ -3,14 +3,27 @@
   "title": "What is the gospel ?",
   "slug": "what-is-the-gospel",
   "author": "joshualinog",
+  "date": "2025-08-12T17:26:00Z",
   "createdAt": "2025-08-12T17:26:00Z",
   "updatedAt": "2025-11-07T21:13:25Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "https://youtube.com/shorts/9SXV7sZFgY0?si=2Ah6dNTDaGUsNhuy",
+  "body": "https://youtube.com/shorts/9SXV7sZFgY0?si=2Ah6dNTDaGUsNhuy",
   "content": "https://youtube.com/shorts/9SXV7sZFgY0?si=2Ah6dNTDaGUsNhuy",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/224",

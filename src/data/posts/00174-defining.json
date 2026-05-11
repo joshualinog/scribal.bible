@@ -3,16 +3,30 @@
   "title": "משפט defining",
   "slug": "defining",
   "author": "joshualinog",
+  "date": "2025-06-08T19:26:23Z",
   "createdAt": "2025-06-08T19:26:23Z",
   "updatedAt": "2025-11-07T21:12:08Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "🗣💎📜 TEN WORDS",
+    "isPost"
+  ],
   "labels": [
     "🗣💎📜 TEN WORDS",
     "isPost"
   ],
   "state": "open",
   "status": "published",
-  "excerpt": "# שפט משפט   - due / to give [a person their] due - the right of a person / group ",
-  "content": "# שפט משפט  \n- due / to give [a person their] due\n- the right of a person / group\n",
+  "excerpt": "# שפט משפט   - due / to give [a person their] due - the right of a person / group",
+  "body": "# שפט משפט  \n- due / to give [a person their] due\n- the right of a person / group",
+  "content": "# שפט משפט  \n- due / to give [a person their] due\n- the right of a person / group",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/174",
     "number": 174

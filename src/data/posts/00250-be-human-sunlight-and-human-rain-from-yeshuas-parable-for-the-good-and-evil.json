@@ -3,8 +3,22 @@
   "title": "Be human sunlight and human rain (from Yeshua's parable for the good and evil)",
   "slug": "be-human-sunlight-and-human-rain-from-yeshuas-parable-for-the-good-and-evil",
   "author": "joshualinog",
+  "date": "2025-09-25T20:50:18Z",
   "createdAt": "2025-09-25T20:50:18Z",
   "updatedAt": "2025-11-07T21:14:01Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "🤔⚠️❤️‍🔥🕊️🦅 Parables of Yeshua the Messiah",
+    "🦍 \"🅴\" - Evangelist | APESI",
+    "isPost"
+  ],
   "labels": [
     "🤔⚠️❤️‍🔥🕊️🦅 Parables of Yeshua the Messiah",
     "🦍 \"🅴\" - Evangelist | APESI",
@@ -13,6 +27,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/250",

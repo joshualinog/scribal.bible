@@ -3,14 +3,27 @@
   "title": "🌎 S1 EARTH ♾️⁷🌈",
   "slug": "s1-earth",
   "author": "joshualinog",
+  "date": "2025-05-15T12:22:31Z",
   "createdAt": "2025-05-15T12:22:31Z",
   "updatedAt": "2025-11-07T21:10:31Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "isPost"
+  ],
   "labels": [
     "isPost"
   ],
   "state": "open",
   "status": "published",
   "excerpt": "# 🌎 S1 EARTH ♾️⁷🌈",
+  "body": "# 🌎 S1 EARTH ♾️⁷🌈",
   "content": "# 🌎 S1 EARTH ♾️⁷🌈",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/113",

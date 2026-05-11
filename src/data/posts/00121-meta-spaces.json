@@ -3,8 +3,21 @@
   "title": "META-SPACES",
   "slug": "meta-spaces",
   "author": "joshualinog",
+  "date": "2025-05-15T13:47:33Z",
   "createdAt": "2025-05-15T13:47:33Z",
   "updatedAt": "2025-11-07T21:10:43Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "♾️⁷🌈 SEVEN SPACES | 7",
+    "isPost"
+  ],
   "labels": [
     "♾️⁷🌈 SEVEN SPACES | 7",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/121",

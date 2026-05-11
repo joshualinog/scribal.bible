@@ -3,8 +3,22 @@
   "title": "ANGER AND ARROGANCE | OVERVIEW OF CONFIGURATIONS",
   "slug": "anger-and-arrogance-overview-of-configurations",
   "author": "joshualinog",
+  "date": "2025-05-28T20:14:34Z",
   "createdAt": "2025-05-28T20:14:34Z",
   "updatedAt": "2025-11-07T21:11:21Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "Ontology",
+    "🐲🤴🏻 | ⚔️⛓️ | ANGER AND ARROGANCE",
+    "isPost"
+  ],
   "labels": [
     "Ontology",
     "🐲🤴🏻 | ⚔️⛓️ | ANGER AND ARROGANCE",
@@ -13,6 +27,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "",
+  "body": "",
   "content": "",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/145",

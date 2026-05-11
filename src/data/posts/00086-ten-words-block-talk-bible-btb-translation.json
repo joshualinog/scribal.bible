@@ -3,8 +3,21 @@
   "title": "TEN WORDS - BLOCK TALK BIBLE ( BTB translation)",
   "slug": "ten-words-block-talk-bible-btb-translation",
   "author": "joshualinog",
+  "date": "2025-05-07T17:56:24Z",
   "createdAt": "2025-05-07T17:56:24Z",
   "updatedAt": "2025-11-07T21:09:55Z",
+  "description": null,
+  "template": null,
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "tags": [
+    "🗣💎📜 TEN WORDS",
+    "isPost"
+  ],
   "labels": [
     "🗣💎📜 TEN WORDS",
     "isPost"
@@ -12,6 +25,7 @@
   "state": "open",
   "status": "published",
   "excerpt": "# TEN WORDS - BLOCK TALK BIBLE ( BTB translation)",
+  "body": "# TEN WORDS - BLOCK TALK BIBLE ( BTB translation)",
   "content": "# TEN WORDS - BLOCK TALK BIBLE ( BTB translation)",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/86",
