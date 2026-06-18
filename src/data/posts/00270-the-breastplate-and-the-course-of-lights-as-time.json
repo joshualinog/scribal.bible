@@ -5,9 +5,9 @@
   "author": "joshualinog",
   "date": "2025-10-02T21:52:53Z",
   "createdAt": "2025-10-02T21:52:53Z",
-  "updatedAt": "2025-11-07T21:14:31Z",
+  "updatedAt": "2026-05-11T16:38:21Z",
   "description": null,
-  "template": null,
+  "template": "basic-body",
   "category": null,
   "mainImage": null,
   "youtube": false,
@@ -31,8 +31,8 @@
   "state": "open",
   "status": "published",
   "excerpt": "#  The breastplate and the course of lights as time",
-  "body": "#  The breastplate and the course of lights as time\n\n\n## zodiac\n\"The zodiac forms a celestial coordinate system, or more specifically an ecliptic coordinate system, which takes the ecliptic as the origin of latitude and the Sun's position at vernal equinox as the origin of longitude.[4] In modern astronomy, the ecliptic coordinate system is still used for tracking Solar System objects.\"\n https://en.wikipedia.org/wiki/Zodiac#:~:text=The%20zodiac%20forms,Solar%20System%20objects.",
-  "content": "#  The breastplate and the course of lights as time\n\n\n## zodiac\n\"The zodiac forms a celestial coordinate system, or more specifically an ecliptic coordinate system, which takes the ecliptic as the origin of latitude and the Sun's position at vernal equinox as the origin of longitude.[4] In modern astronomy, the ecliptic coordinate system is still used for tracking Solar System objects.\"\n https://en.wikipedia.org/wiki/Zodiac#:~:text=The%20zodiac%20forms,Solar%20System%20objects.",
+  "body": "#  The breastplate and the course of lights as time\n\n## zodiac\n\"The zodiac forms a celestial coordinate system, or more specifically an ecliptic coordinate system, which takes the ecliptic as the origin of latitude and the Sun's position at vernal equinox as the origin of longitude.[4] In modern astronomy, the ecliptic coordinate system is still used for tracking Solar System objects.\"\n https://en.wikipedia.org/wiki/Zodiac#:~:text=The%20zodiac%20forms,Solar%20System%20objects.",
+  "content": "#  The breastplate and the course of lights as time\n\n## zodiac\n\"The zodiac forms a celestial coordinate system, or more specifically an ecliptic coordinate system, which takes the ecliptic as the origin of latitude and the Sun's position at vernal equinox as the origin of longitude.[4] In modern astronomy, the ecliptic coordinate system is still used for tracking Solar System objects.\"\n https://en.wikipedia.org/wiki/Zodiac#:~:text=The%20zodiac%20forms,Solar%20System%20objects.",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/270",
     "number": 270

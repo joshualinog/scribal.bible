@@ -5,9 +5,9 @@
   "author": "joshualinog",
   "date": "2025-08-12T17:27:50Z",
   "createdAt": "2025-08-12T17:27:50Z",
-  "updatedAt": "2025-11-07T21:13:26Z",
+  "updatedAt": "2026-05-11T16:39:30Z",
   "description": null,
-  "template": null,
+  "template": "basic-body",
   "category": null,
   "mainImage": null,
   "youtube": false,
@@ -33,8 +33,8 @@
   "state": "open",
   "status": "published",
   "excerpt": "# do we still need the old testament?  ## Wednesday August 13th @ shed",
-  "body": "# do we still need the old testament? \n## Wednesday August 13th @ shed\n\n### OBJECTIVES\n\n- [ ] confirm title for short \n- [ ] come up with useful description \n- [ ] consider creative ideas for intro \n- [ ] think about how we will collaborate in the shed tomorrow \n- [ ] Try to figure out a more creative thumbnail that the algorithm will be pleased with",
-  "content": "# do we still need the old testament? \n## Wednesday August 13th @ shed\n\n### OBJECTIVES\n\n- [ ] confirm title for short \n- [ ] come up with useful description \n- [ ] consider creative ideas for intro \n- [ ] think about how we will collaborate in the shed tomorrow \n- [ ] Try to figure out a more creative thumbnail that the algorithm will be pleased with",
+  "body": "# do we still need the old testament? \n## Wednesday August 13th @ shed\n\n- [ ] confirm title for short \n- [ ] come up with useful description \n- [ ] consider creative ideas for intro \n- [ ] think about how we will collaborate in the shed tomorrow \n- [ ] Try to figure out a more creative thumbnail that the algorithm will be pleased with",
+  "content": "# do we still need the old testament? \n## Wednesday August 13th @ shed\n\n- [ ] confirm title for short \n- [ ] come up with useful description \n- [ ] consider creative ideas for intro \n- [ ] think about how we will collaborate in the shed tomorrow \n- [ ] Try to figure out a more creative thumbnail that the algorithm will be pleased with",
   "raw_issue": {
     "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/225",
     "number": 225
