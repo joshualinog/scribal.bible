@@ -5,7 +5,7 @@
   "author": "joshualinog",
   "date": "2026-05-04T13:35:54Z",
   "createdAt": "2026-05-04T13:35:54Z",
-  "updatedAt": "2026-06-18T18:20:10Z",
+  "updatedAt": "2026-06-18T18:20:48Z",
   "description": null,
   "template": "bible-study",
   "category": null,
@@ -18,9 +18,11 @@
   "links": null,
   "steps": false,
   "tags": [
+    "3️⃣ Word Three | 3",
     "isPost"
   ],
   "labels": [
+    "3️⃣ Word Three | 3",
     "isPost"
   ],
   "state": "open",
