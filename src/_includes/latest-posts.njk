@@ -1,76 +1,119 @@
-<div class="bg-gray-50 py-24 sm:py-32 dark:bg-gray-800/50">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">Recently Published</h2>
-      <p class="mt-2 text-4xl font-semibold tracking-tight text-gray-900 text-balance sm:text-5xl dark:text-white">Fresh explorations</p>
-    </div>
-    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      {% for i in [0, 1, 2] %}
-        {% set post = posts[i] %}
-        {% if post %}
-        <article class="flex flex-col items-start justify-between">
+<div class="bg-cream-50 py-24 sm:py-32 dark:bg-dark-black-900">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <h2 class="text-base/7 font-semibold text-brick-red-600 dark:text-brick-red-400">Recently Published</h2>
+    <p class="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-dark-black-900 sm:text-5xl dark:text-cream-50">Fresh explorations</p>
 
-          {# Card image — real mainImage or per-template default #}
-          {% set _imgs = defaultImages[post.template] if (post.template and defaultImages[post.template]) else defaultImages["default"] %}
-          {% set _heroImg = post.mainImage if post.mainImage else _imgs[post.id % _imgs.length] %}
-          <div class="relative w-full">
-            <img src="{{ _heroImg }}" alt="{{ post.title }}" class="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2 dark:bg-gray-800" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="aspect-video w-full rounded-2xl sm:aspect-2/1 lg:aspect-3/2 bg-linear-to-br from-indigo-50 to-indigo-100 dark:from-indigo-950 dark:to-gray-900 items-center justify-center" style="display:none">
-              <svg class="size-10 text-indigo-300 dark:text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
-            </div>
-            <div class="absolute inset-0 rounded-2xl inset-ring inset-ring-gray-900/10 dark:inset-ring-white/10"></div>
-          </div>
+    <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
 
-          <div class="flex max-w-xl grow flex-col justify-between">
-            <div class="mt-8 flex items-center gap-x-4 text-xs">
-              <time datetime="{{ post.date or post.createdAt }}" class="text-gray-500 dark:text-gray-400">
-                {{ (post.date or post.createdAt) | date("MMM dd, yyyy") }}
-              </time>
-              {% if post.category %}
-                <span class="relative z-10 rounded-full bg-indigo-50 px-3 py-1.5 font-medium text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
-                  {{ post.category }}
-                </span>
-              {% elif post.labels and post.labels.length %}
-                {% for label in post.labels %}
-                  {% if label != "isPost" and loop.first %}
-                    <span class="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600 dark:bg-white/10 dark:text-gray-400">{{ label }}</span>
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
-            </div>
-
-            <div class="group relative grow">
-              <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600 dark:text-white dark:group-hover:text-gray-300">
-                <a href="/posts/{{ post.slug }}/">
-                  <span class="absolute inset-0"></span>
-                  {{ post.title }}
-                </a>
+      {# Post 0 — top left, col-span-3 #}
+      {% set post = posts[0] %}
+      {% if post %}
+        {% set _imgs = defaultImages[post.template] if (post.template and defaultImages[post.template]) else defaultImages["default"] %}
+        {% set _heroImg = post.mainImage if post.mainImage else _imgs[post.id % _imgs.length] %}
+        <div class="relative lg:col-span-3">
+          <div class="absolute inset-0 rounded-lg bg-cream-100 max-lg:rounded-t-4xl lg:rounded-tl-4xl dark:bg-charcoal-800"></div>
+          <a href="/posts/{{ post.slug }}/" class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)] group">
+            <img src="{{ _heroImg }}" alt="{{ post.title }}" class="h-80 object-cover object-center w-full" onerror="this.src=''" />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-brick-red-600 dark:text-brick-red-400">
+                {% if post.category %}{{ post.category }}{% elif post.labels and post.labels.length %}{% for label in post.labels %}{% if label != "isPost" and loop.first %}{{ label }}{% endif %}{% endfor %}{% else %}Post{% endif %}
               </h3>
-              <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600 dark:text-gray-400">
-                {{ post.description or post.excerpt }}
-              </p>
+              <p class="mt-2 text-lg font-medium tracking-tight text-dark-black-900 group-hover:text-brick-red-700 dark:text-cream-100 dark:group-hover:text-brick-red-300 line-clamp-2">{{ post.title }}</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-charcoal-600 dark:text-cream-400 line-clamp-3">{{ post.description or post.excerpt }}</p>
             </div>
+          </a>
+          <div class="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-t-4xl lg:rounded-tl-4xl dark:outline-white/15"></div>
+        </div>
+      {% endif %}
 
-            {% if post.author %}
-              <div class="relative mt-8 flex items-center gap-x-3">
-                <div class="size-10 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center flex-shrink-0">
-                  <span class="text-sm font-semibold text-indigo-700 dark:text-indigo-300 uppercase">
-                    {{ post.author[0] }}
-                  </span>
-                </div>
-                <div class="text-sm/6">
-                  <p class="font-semibold text-gray-900 dark:text-white">{{ post.author }}</p>
-                </div>
-              </div>
-            {% endif %}
+      {# Post 1 — top right, col-span-3 #}
+      {% set post = posts[1] %}
+      {% if post %}
+        {% set _imgs = defaultImages[post.template] if (post.template and defaultImages[post.template]) else defaultImages["default"] %}
+        {% set _heroImg = post.mainImage if post.mainImage else _imgs[post.id % _imgs.length] %}
+        <div class="relative lg:col-span-3">
+          <div class="absolute inset-0 rounded-lg bg-cream-100 lg:rounded-tr-4xl dark:bg-charcoal-800"></div>
+          <a href="/posts/{{ post.slug }}/" class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)] group">
+            <img src="{{ _heroImg }}" alt="{{ post.title }}" class="h-80 object-cover object-center lg:object-right w-full" onerror="this.src=''" />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-brick-red-600 dark:text-brick-red-400">
+                {% if post.category %}{{ post.category }}{% elif post.labels and post.labels.length %}{% for label in post.labels %}{% if label != "isPost" and loop.first %}{{ label }}{% endif %}{% endfor %}{% else %}Post{% endif %}
+              </h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-dark-black-900 group-hover:text-brick-red-700 dark:text-cream-100 dark:group-hover:text-brick-red-300 line-clamp-2">{{ post.title }}</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-charcoal-600 dark:text-cream-400 line-clamp-3">{{ post.description or post.excerpt }}</p>
+            </div>
+          </a>
+          <div class="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 lg:rounded-tr-4xl dark:outline-white/15"></div>
+        </div>
+      {% endif %}
 
-          </div>
-        </article>
-        {% endif %}
-      {% endfor %}
+      {# Post 2 — bottom left, col-span-2 #}
+      {% set post = posts[2] %}
+      {% if post %}
+        {% set _imgs = defaultImages[post.template] if (post.template and defaultImages[post.template]) else defaultImages["default"] %}
+        {% set _heroImg = post.mainImage if post.mainImage else _imgs[post.id % _imgs.length] %}
+        <div class="relative lg:col-span-2">
+          <div class="absolute inset-0 rounded-lg bg-cream-100 lg:rounded-bl-4xl dark:bg-charcoal-800"></div>
+          <a href="/posts/{{ post.slug }}/" class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)] group">
+            <img src="{{ _heroImg }}" alt="{{ post.title }}" class="h-80 object-cover object-center w-full" onerror="this.src=''" />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-brick-red-600 dark:text-brick-red-400">
+                {% if post.category %}{{ post.category }}{% elif post.labels and post.labels.length %}{% for label in post.labels %}{% if label != "isPost" and loop.first %}{{ label }}{% endif %}{% endfor %}{% else %}Post{% endif %}
+              </h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-dark-black-900 group-hover:text-brick-red-700 dark:text-cream-100 dark:group-hover:text-brick-red-300 line-clamp-2">{{ post.title }}</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-charcoal-600 dark:text-cream-400 line-clamp-3">{{ post.description or post.excerpt }}</p>
+            </div>
+          </a>
+          <div class="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 lg:rounded-bl-4xl dark:outline-white/15"></div>
+        </div>
+      {% endif %}
+
+      {# Post 3 — bottom middle, col-span-2 #}
+      {% set post = posts[3] %}
+      {% if post %}
+        {% set _imgs = defaultImages[post.template] if (post.template and defaultImages[post.template]) else defaultImages["default"] %}
+        {% set _heroImg = post.mainImage if post.mainImage else _imgs[post.id % _imgs.length] %}
+        <div class="relative lg:col-span-2">
+          <div class="absolute inset-0 rounded-lg bg-cream-100 dark:bg-charcoal-800"></div>
+          <a href="/posts/{{ post.slug }}/" class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] group">
+            <img src="{{ _heroImg }}" alt="{{ post.title }}" class="h-80 object-cover w-full" onerror="this.src=''" />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-brick-red-600 dark:text-brick-red-400">
+                {% if post.category %}{{ post.category }}{% elif post.labels and post.labels.length %}{% for label in post.labels %}{% if label != "isPost" and loop.first %}{{ label }}{% endif %}{% endfor %}{% else %}Post{% endif %}
+              </h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-dark-black-900 group-hover:text-brick-red-700 dark:text-cream-100 dark:group-hover:text-brick-red-300 line-clamp-2">{{ post.title }}</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-charcoal-600 dark:text-cream-400 line-clamp-3">{{ post.description or post.excerpt }}</p>
+            </div>
+          </a>
+          <div class="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 dark:outline-white/15"></div>
+        </div>
+      {% endif %}
+
+      {# Post 4 — bottom right, col-span-2 #}
+      {% set post = posts[4] %}
+      {% if post %}
+        {% set _imgs = defaultImages[post.template] if (post.template and defaultImages[post.template]) else defaultImages["default"] %}
+        {% set _heroImg = post.mainImage if post.mainImage else _imgs[post.id % _imgs.length] %}
+        <div class="relative lg:col-span-2">
+          <div class="absolute inset-0 rounded-lg bg-cream-100 max-lg:rounded-b-4xl lg:rounded-br-4xl dark:bg-charcoal-800"></div>
+          <a href="/posts/{{ post.slug }}/" class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)] group">
+            <img src="{{ _heroImg }}" alt="{{ post.title }}" class="h-80 object-cover w-full" onerror="this.src=''" />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-brick-red-600 dark:text-brick-red-400">
+                {% if post.category %}{{ post.category }}{% elif post.labels and post.labels.length %}{% for label in post.labels %}{% if label != "isPost" and loop.first %}{{ label }}{% endif %}{% endfor %}{% else %}Post{% endif %}
+              </h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-dark-black-900 group-hover:text-brick-red-700 dark:text-cream-100 dark:group-hover:text-brick-red-300 line-clamp-2">{{ post.title }}</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-charcoal-600 dark:text-cream-400 line-clamp-3">{{ post.description or post.excerpt }}</p>
+            </div>
+          </a>
+          <div class="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-br-4xl dark:outline-white/15"></div>
+        </div>
+      {% endif %}
+
     </div>
-    <div class="mt-16 flex justify-center">
-      <a href="/#post-grid" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+
+    <div class="mt-10 flex justify-center">
+      <a href="/#post-grid" class="text-sm font-semibold text-brick-red-600 hover:text-brick-red-500 dark:text-brick-red-400 dark:hover:text-brick-red-300">
         View all posts <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
