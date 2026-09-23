@@ -1,0 +1,33 @@
+{
+  "id": 398,
+  "title": "We are starting the Scribal Bible Podcast!",
+  "slug": "398-we-are-starting-the-scribal-bible-podcast",
+  "author": "Joshua Linog",
+  "date": "2026-09-23T17:18:51Z",
+  "createdAt": "2026-09-23T17:18:51Z",
+  "updatedAt": "2026-09-23T17:47:55Z",
+  "description": "Gird your mental loins and prepare yourselves for dorks in the extreme!  We love conversation and exploration that piddles around and rabbit holes to the extreme. Sometimes getting lost is part of the journey, and nerding out is part of a nerding out is a key variable in the equation! A jack of all trades and master of some, friends asking questions without fear of reprisal. Questions are good! Especially if they're directed at God.",
+  "template": "basic-body",
+  "category": null,
+  "mainImage": "https://ibb.co/hFsmBj44",
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "is_podcast": true,
+  "tags": [
+    "isPost"
+  ],
+  "labels": [
+    "isPost"
+  ],
+  "state": "open",
+  "status": "published",
+  "excerpt": "<img src=\"<img src=\"https://ibb.co/MxrkQ5b7\" alt=\"Alt text\" width=\"500\" />\" alt=\"Alt text\" width=\"500\" />",
+  "body": "<img src=\"<img src=\"https://ibb.co/MxrkQ5b7\" alt=\"Alt text\" width=\"500\" />\" alt=\"Alt text\" width=\"500\" />\n\nWrite your post here...",
+  "content": "<img src=\"<img src=\"https://ibb.co/MxrkQ5b7\" alt=\"Alt text\" width=\"500\" />\" alt=\"Alt text\" width=\"500\" />\n\nWrite your post here...",
+  "raw_issue": {
+    "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/398",
+    "number": 398
+  }
+}
