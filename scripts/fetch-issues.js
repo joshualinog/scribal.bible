@@ -111,6 +111,14 @@ async function processIssue(issue) {
 
   let body = issue.body || '';
 
+  // Extract is_podcast from YAML front matter block if present
+  const fmMatch = body.match(/^---\r?\n([\s\S]*?)^---\r?\n?/m);
+  let is_podcast = false;
+  if (fmMatch) {
+    const fmLine = fmMatch[1].match(/^is_podcast:\s*(.+)$/m);
+    if (fmLine) is_podcast = fmLine[1].trim() === 'true';
+  }
+
   // find image markdown and download assets
   const imgRegex = /!\[[^\]]*\]\((https?:[^)"']+)\)/g;
   const assetFiles = [];
@@ -165,6 +173,7 @@ async function processIssue(issue) {
     assets: assetFiles.map(a => ({ path: a.path, url: a.url })),
     excerpt: (issue.body && issue.body.split('\n').find(l => l.trim()).slice(0, 200)) || '',
     draft: labels.includes('draft') || false,
+    is_podcast,
     custom: {}
   };
 
