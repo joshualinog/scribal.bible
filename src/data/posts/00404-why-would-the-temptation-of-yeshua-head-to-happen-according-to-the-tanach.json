@@ -1,0 +1,33 @@
+{
+  "id": 404,
+  "title": "why would the temptation of Yeshua head to happen according to the Tanach?",
+  "slug": "404-why-would-the-temptation-of-yeshua-head-to-happen-according-to-the-tanach",
+  "author": "joshualinog",
+  "date": "2026-11-25T21:39:32Z",
+  "createdAt": "2026-11-25T21:39:32Z",
+  "updatedAt": "2026-11-25T21:39:32Z",
+  "description": null,
+  "template": "basic-body",
+  "category": null,
+  "mainImage": null,
+  "youtube": false,
+  "bible": null,
+  "links": null,
+  "steps": false,
+  "is_podcast": false,
+  "tags": [
+    "isPost"
+  ],
+  "labels": [
+    "isPost"
+  ],
+  "state": "open",
+  "status": "published",
+  "excerpt": "Write your post here...",
+  "body": "Write your post here...",
+  "content": "Write your post here...",
+  "raw_issue": {
+    "url": "https://github.com/joshualinog/scribal.bible-CONTENT-CREATION/issues/404",
+    "number": 404
+  }
+}
